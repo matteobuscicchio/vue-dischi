@@ -9,25 +9,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <img src="logo.png" alt="logo" />
-            </div>
-        </header>
 
         <div id="app">
 
-            <div class="cds-container container">
-                <!-- Disco ad esempio -->
-                <div class="cd" v-for="disk in mDisks">
-                    <img :src="disk.poster" alt="">
-                    <h3>{{disk.title}}</h3>
-                    <span class="author">{{disk.author}}</span>
-                    <span class="year">{{disk.year}}</span>
+            <header>
+
+                <div class="container">
+                    <img src="logo.png" alt="logo" />
                 </div>
-            </div>
+            </header>
+            
+            <main>
+    
+                <div class="cds-container container">
+
+                    <div class="cd" v-for="disk in mDisks">
+                        <img :src="disk.poster" alt="">
+                        <h3>{{disk.title}}</h3>
+                        <span class="author">{{disk.author}}</span>
+                        <span class="year">{{disk.year}}</span>
+                    </div>
+                </div>
+            </main>
         </div>
-        
+
 
         <!-- Vue-JS -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
